@@ -12,8 +12,8 @@ var Navbar = React.createClass({
     return (
       <header className="header">
         <div className="container">
-          <Link className="" to="home">
-            <h1>Fly More</h1>
+          <Link className="" to="/">
+            <h1>Movie Me</h1>
           </Link>
         </div>
       </header>

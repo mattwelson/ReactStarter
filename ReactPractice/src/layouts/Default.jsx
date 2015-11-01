@@ -14,7 +14,7 @@ var DefaultLayout = React.createClass({
     return (
       <div>
         <Navbar />
-        <this.props.activeRouteHandler />
+        {this.props.children}
         <Footer />
       </div>
     );

@@ -5,18 +5,23 @@
 'use strict';
 
 var React = require('react');
-var {Routes, Route} = require('react-router');
+var {Router, Route, IndexRoute } = require('react-router');
+var ReactDom = require('react-dom');
+var App = require('./layouts/Default.jsx');
+var Home = require('./pages/Home.jsx');
+var Movie = require('./pages/Movie.jsx');
 
 // Export React so the dev tools can find it
 (window !== window.top ? window.top : window).React = React;
 
-React.renderComponent(
-  <Routes location="history">
-    <Route name="app" path="/" handler={require('./layouts/Default.jsx')}>
-      <Route name="home" path="/" handler={require('./pages/Home.jsx')} />
-      <Route name="privacy" handler={require('./pages/Privacy.jsx')} />
-      <Route name="login" handler={require('./pages/Login.jsx')} />
+ReactDom.render(
+  <Router>
+    <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+      <Route path="movie" component={Home}>
+        <Route path=":id" component={Movie} />
+      </Route>
     </Route>
-  </Routes>,
-  document.body
+  </Router>,
+  document.getElementById('reacthook')
 );
