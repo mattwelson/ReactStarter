@@ -61,6 +61,8 @@
     <Content Include="src\styles\utilities.less" />
     <Content Include="src\styles\variables.less" />
     <Content Include="src\components\Footer.jsx" />
+    <Content Include="src\pages\Login.jsx" />
+    <Content Include="src\pages\Register.jsx" />
     <None Include="src\styles\normalize.less" />
     <None Include="src\styles\skeleton.less" />
     <Content Include=".editorconfig" />

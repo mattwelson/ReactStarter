@@ -13,7 +13,7 @@ var Navbar = React.createClass({
       <header className="header">
         <div className="container">
           <Link className="" to="home">
-            Fly More
+            <h1>Fly More</h1>
           </Link>
         </div>
       </header>

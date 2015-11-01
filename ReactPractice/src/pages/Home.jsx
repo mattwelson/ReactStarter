@@ -5,13 +5,15 @@
 'use strict';
 
 var React = require('react');
+var {Link} = require('react-router');
 
 var HomePage = React.createClass({
   render() {
     return (
       <div className="container">
+        <Link to={'login'}>Log in</Link>
         <div className="row">
-          <div className="col-sm-4">
+          <div className="four columns">
             <h3>Runtime Components</h3>
             <dl>
               <dt><a href="https://facebook.github.io/react/">React</a></dt>
@@ -22,7 +24,7 @@ var HomePage = React.createClass({
               <dd>CSS framework for developing responsive, mobile first interfaces</dd>
             </dl>
           </div>
-          <div className="col-sm-4">
+          <div className="four columns">
             <h3>Development Tools</h3>
             <dl>
               <dt><a href="http://gulpjs.com">Gulp</a></dt>
@@ -33,7 +35,7 @@ var HomePage = React.createClass({
               <dd>A lightweight HTTP server for development</dd>
             </dl>
           </div>
-          <div className="col-sm-4">
+          <div className="four columns">
             <h3>Fork me on GitHub</h3>
             <p><a href="https://github.com/kriasoft/react-starter-kit">github.com/kriasoft/react-starter-kit</a></p>
           </div>
